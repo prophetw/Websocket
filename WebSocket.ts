@@ -7,7 +7,6 @@ var wsm = new WebSocket("ws://192.168.23.199:8054");
 
 const aa = wsm.send(
     {
-        "packetId": 0,
         "list":
             [
                 {
@@ -80,7 +79,6 @@ class WebSocketService {
 
     idMap: Map<string, string>;
 
-    // TODO: 需要实现一个延时批量发送的机制 reqDataList.length>=300  send data to serverSide
     reqDataListWaitToSend: OperationJSONObj[];
 
     batchMaxReqList: number;
